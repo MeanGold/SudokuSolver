@@ -69,6 +69,23 @@
             ]
         },
         {
+            name: 'Modular Line',
+            type: 'line',
+            color: '#33BBAA',
+            colorDark: '#33BBAA',
+            lineWidth: 0.25,
+            tooltip: [
+                'Every set of three sequential digits along a line must contain a complete set of residues modulo 3,',
+                'i.e. one digit from {1,4,7}, one from {2,5,8}, and one from {3,6,9}.',
+                'Digits may repeat on a line if allowed by other rules.',
+                'Modular lines of length 2 must contain elements from different classes.',
+                '',
+                'Click and drag to draw a modular line.',
+                'Click on a modular line to remove it.',
+                'Shift click and drag to draw overlapping modular lines.',
+            ]
+        }
+        {
             name: 'Region Sum Line',
             type: 'line',
             color: '#2ECBFF',
@@ -577,6 +594,64 @@
                 }
             }
 
+            //Modular Line
+            const constraintsModularLine = constraints[cID('Modular Line')];
+            if (constraintsModularLine && constraintsModularLine.length > 0) {
+                /*
+                const modularLineGroups = [
+                    [1, 4, 7],
+                    [2, 5, 8],
+                    [3, 6, 9]
+                ];
+                for (let modularLine of constraintsModularLine) {
+                    for (let line of modularLine.lines) {
+                        const index = line.indexOf(cell);
+                        if (index > -1) {
+                            let lineGroupIndices = [-1, -1, -1];
+
+                            let nGroup = -1;
+
+                            for (let i = 0; i < modularLineGroups.length; i++) {
+                                if (modularLineGroups[i].includes(n)) {
+                                    nGroup = i;
+                                }
+                            }
+
+                            for (let i = 0; i < line.length; i++) {
+                                if (line[i].value) {
+                                    for (let j = 0; j < modularLineGroups.length; j++) {
+                                        if (modularLineGroups[j].includes(line[i].value)) {
+                                            if (lineGroupIndices[j] === -1) {
+                                                lineGroupIndices[j] = i % 3;
+                                            } else if (lineGroupIndices[j] !== i % 3) {
+                                                if (index % 3 === i % 3 || lineGroupIndices[j] === index % 3) {
+                                                    return false;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+
+                            if (lineGroupIndices[nGroup] !== -1) {
+                                if (lineGroupIndices[nGroup] !== (index % 3)) {
+                                    return false;
+                                } else if (lineGroupIndices.indexOf(index % 3) !== -1 && lineGroupIndices.indexOf(index % 3) !== nGroup) {
+                                    return false;
+                                }
+                            } else if (lineGroupIndices[(nGroup + 1) % 3] !== -1 && lineGroupIndices[(nGroup + 2) % 3] !== -1) {
+                                if (lineGroupIndices[(nGroup + 1) % 3] === (index % 3) || lineGroupIndices[(nGroup + 2) % 3] == (index % 3)) {
+                                    return false;
+                                }
+                            }
+
+                        }
+                    }
+                }
+                */
+            }
+
             // Region Sum Lines
             const constraintsRegionSumLines = constraints[cID('Region Sum Line')];
             if (constraintsRegionSumLines && constraintsRegionSumLines.length > 0) {
@@ -829,6 +904,24 @@
 
             this.addCellToLine = function(cell) {
                 this.lines[this.lines.length - 1].push(cell);
+            }
+        }
+
+        //Modular Line
+        window.modularline = function (cell) {
+            this.lines = [
+                [cell]
+            ];
+
+            this.show = function () {
+                const modularLineInfo = newConstraintInfo.filter(c => c.name === 'Modular Line')[0]; 
+                for (var a = 0; a < this.lines.length; a++) {
+                    drawLine(this.lines[a], modularLineInfo.color, modularLineInfo.colorDark, modularLineInfo.lineWidth); 
+                }
+            }
+
+            this.addCellToLine = function(cell) {
+                this.lines[this.lines.length - 1].push(cell); 
             }
         }
 
