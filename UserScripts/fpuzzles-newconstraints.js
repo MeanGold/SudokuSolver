@@ -84,7 +84,7 @@
                 'Click on a modular line to remove it.',
                 'Shift click and drag to draw overlapping modular lines.',
             ]
-        }
+        },
         {
             name: 'Region Sum Line',
             type: 'line',
