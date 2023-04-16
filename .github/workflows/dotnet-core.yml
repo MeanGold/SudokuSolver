@@ -1,6 +1,6 @@
 name: Build, Test, and Publish
 
-on:
+on: [workflow_dispatch]
   push:
     branches: [ master, dev ]
 
