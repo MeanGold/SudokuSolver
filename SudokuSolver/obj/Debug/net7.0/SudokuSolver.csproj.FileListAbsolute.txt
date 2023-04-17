@@ -1,0 +1,12 @@
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\bin\Debug\net7.0\SudokuSolver.deps.json
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\bin\Debug\net7.0\SudokuSolver.dll
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\bin\Debug\net7.0\SudokuSolver.pdb
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\obj\Debug\net7.0\SudokuSolver.csproj.AssemblyReference.cache
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\obj\Debug\net7.0\SudokuSolver.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\obj\Debug\net7.0\SudokuSolver.AssemblyInfoInputs.cache
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\obj\Debug\net7.0\SudokuSolver.AssemblyInfo.cs
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\obj\Debug\net7.0\SudokuSolver.csproj.CoreCompileInputs.cache
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\obj\Debug\net7.0\SudokuSolver.dll
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\obj\Debug\net7.0\refint\SudokuSolver.dll
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\obj\Debug\net7.0\SudokuSolver.pdb
+C:\Users\jonat\Downloads\SudokuSolver-modularlines\SudokuSolver\obj\Debug\net7.0\ref\SudokuSolver.dll
